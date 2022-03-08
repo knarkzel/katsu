@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <form action="/create" method="POST">
+      <div>
+        <textarea autocomplete="off" name="body" rows=8 required></textarea>
+      </div>
+      <button type="submit">Tweet!</button>
+    </form>
     <p>
       Tweets:
     </p>

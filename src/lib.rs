@@ -7,14 +7,16 @@ pub mod template;
 #[macro_use]
 extern crate diesel;
 
-pub use axum::response::{Html, IntoResponse};
 pub use diesel::prelude::*;
 pub use eyre::WrapErr;
 pub use fehler::throws;
 pub use sailfish::TemplateOnce;
 
 // Custom error
-use axum::{http::StatusCode, response::Response};
+use axum::{
+    http::StatusCode,
+    response::{IntoResponse, Response},
+};
 
 #[derive(Debug)]
 pub struct Error(pub eyre::Report);

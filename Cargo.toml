@@ -9,6 +9,8 @@ fehler = "1.0"
 dotenv = "0.15"
 sailfish = "0.3"
 diesel_migrations = "1.4"
+serde = { version = "1.0", features = ["derive"] }
 tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
 axum = { version = "0.4", default_features = false, features = ["http1"] }
 diesel = { version = "1.4", default_features = false, features = ["sqlite", "r2d2"] }
+
