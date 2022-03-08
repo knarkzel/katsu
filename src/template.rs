@@ -1,3 +1,4 @@
+use crate::*;
 use axum::response::Html;
 use sailfish::TemplateOnce;
 
@@ -13,6 +14,6 @@ impl<T: TemplateOnce> Render for T {
 
 #[derive(TemplateOnce)]
 #[template(path = "index.stpl")]
-pub struct Index<'a> {
-    pub users: [&'a str; 3],
+pub struct Index {
+    pub tweets: Vec<models::Tweet>,
 }

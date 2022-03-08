@@ -9,11 +9,11 @@
   </head>
   <body>
     <p>
-      Users:
+      Tweets:
     </p>
     <ul>
-      <% for user in &users { %>
-        <li><%= user %></li>
+      <% for tweet in &tweets { %>
+        <li><%= tweet.body %></li>
       <% } %>
     </ul>
   </body>
