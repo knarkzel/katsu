@@ -4,6 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+eyre = "0.6"
+fehler = "1.0"
 dotenv = "0.15"
 sailfish = "0.3"
 diesel_migrations = "1.4"
