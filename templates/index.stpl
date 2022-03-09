@@ -8,18 +8,32 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <form action="/create" method="POST">
-      <div>
-        <textarea autocomplete="off" name="body" rows=8 required></textarea>
-      </div>
-      <button type="submit">Tweet!</button>
-    </form>
+    <% if user.is_none() { %>
+      <nav>
+        <a href="/register">
+          Register
+        </a>
+        |
+        <a href="/login">
+          Login
+        </a>
+      </nav>
+    <% } %>
+    <% if user.is_some() { %>
+      <form action="/create" method="POST">
+        <div>
+          <textarea autocomplete="off" name="body" rows=8 required></textarea>
+        </div>
+        <button type="submit">Publish</button>
+      </form>
+    <% } %>
+    <h1>Katsu</h1>
     <p>
-      Tweets:
+      Latest posts:
     </p>
     <ul>
-      <% for tweet in &tweets { %>
-        <li><%= tweet.body %></li>
+      <% for post in &posts { %>
+        <li><%= post.body %>, <%= post.user_id %></li>
       <% } %>
     </ul>
   </body>

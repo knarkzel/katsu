@@ -11,6 +11,7 @@ dotenv = "0.15"
 sailfish = "0.3"
 serde_json = "1.0"
 async-trait = "0.1"
+rust-argon2 = "1.0"
 tower-cookies = "0.5"
 diesel_migrations = "1.4"
 serde = { version = "1.0", features = ["derive"] }
